@@ -16,15 +16,16 @@ pip install -r requirements.txt
 python verify_env.py            # paketleri + DEM okumayı doğrular
 ```
 
-Python 3.11 ile test edildi. `dem.tif`, `dere.tif`, `hillshade.tif`,
-`hava_dis_sinir.tif`, `istasyon.tif`, `rezervuar.tif` (+ `*_geo.tif/.tfw`
-varyantları) repoya dahil **değildir** (`.gitignore`) — README'de belirtildiği
-gibi bunlar artık aktif pipeline'da girdi olarak kullanılmıyor, sadece bir
-kerelik görsel referans/karşılaştırma içindi. Pipeline'ı adım 1'den (kontur →
-DEM) çalıştırmak isterseniz `../../dem/dem/dem.gdb` (Esri File Geodatabase)
-ayrıca gerekir, bu repo dışında tutulur; aksi halde `dem_processed/DEM_UTM35N.tif`
-zaten üretilmiş halde repoda mevcuttur ve adım 2'den devam edilebilir (bkz.
-"Pipeline" bölümü).
+Python 3.11 ile test edildi. `dem.tif`, `dem_geo.tif`, `dere.tif`,
+`hillshade.tif`/`hillshade_geo.tif`, `hava_dis_sinir.tif`, `istasyon.tif`/
+`istasyon_geo.tif`, `rezervuar.tif` (~600MB, hiçbir scriptte okunmuyor, salt
+görsel/tarihsel) repoya dahil **değildir** (`.gitignore`). `hava_dis_sinir_geo.tif`,
+`rezervuar_geo.tif`, `dere_geo.tif` ise **dahildir** — `extract_official_basin.py`
+(pipeline adım 3) bunları gerçekten girdi olarak okuyor. Pipeline'ı adım 1'den
+(kontur → DEM) çalıştırmak isterseniz `../../dem/dem/dem.gdb` (Esri File
+Geodatabase) ve karşılaştırma için `dem_geo.tif` ayrıca gerekir, bu repo dışında
+tutulur; aksi halde `dem_processed/DEM_UTM35N.tif` zaten üretilmiş halde repoda
+mevcuttur ve adım 2'den devam edilebilir (bkz. "Pipeline" bölümü).
 
 ## İçindekiler
 1. [Hızlı bakış — hangi dosya ne işe yarıyor](#hızlı-bakış)

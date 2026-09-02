@@ -3,9 +3,10 @@
 __pycache__/
 *.pyc
 
-# Artik aktif pipeline'da girdi olmayan ham render dosyalari (bkz. README ->
-# "Dizin yapisi" notu). Gorsel referans icin sadece bir kez kullanildi,
-# tekrar uretilmesi gerekmiyor; ~680MB oldugu icin repoya dahil edilmiyor.
+# Hicbir scriptte kullanilmayan, tamamen gorsel/tarihsel ham render dosyalari
+# (~600MB). hava_dis_sinir_geo.tif / rezervuar_geo.tif / dere_geo.tif BURADA
+# YOK cunku extract_official_basin.py (pipeline adim 3) bunlari gercekten
+# okuyor -- onlar repoya dahil.
 /dem.tif
 /dem.tif.aux.xml
 /dem.tif.ovr
@@ -16,17 +17,9 @@ __pycache__/
 /dere.tif
 /dere.tif.aux.xml
 /dere.tif.ovr
-/dere_geo.tif
-/dere_geo.tif.aux.xml
-/dere_geo.tif.ovr
-/dere_geo.tfw
 /hava_dis_sinir.tif
 /hava_dis_sinir.tif.aux.xml
 /hava_dis_sinir.tif.ovr
-/hava_dis_sinir_geo.tif
-/hava_dis_sinir_geo.tif.aux.xml
-/hava_dis_sinir_geo.tif.ovr
-/hava_dis_sinir_geo.tfw
 /hillshade.tif
 /hillshade.tif.aux.xml
 /hillshade.tif.ovr
@@ -44,10 +37,6 @@ __pycache__/
 /rezervuar.tif
 /rezervuar.tif.aux.xml
 /rezervuar.tif.ovr
-/rezervuar_geo.tif
-/rezervuar_geo.tif.aux.xml
-/rezervuar_geo.tif.ovr
-/rezervuar_geo.tfw
 
 # OS / editor
 .DS_Store
