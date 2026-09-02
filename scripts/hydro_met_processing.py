@@ -1,7 +1,7 @@
 """
 Faz 1 - Asama A: Hidro-Meteoroloji Veri Temizleme (wide format)
 
-Kaynak: hidro_meteoroloji/raw/Yuvacik_Hidro-Meteoroloji_ Gunluk 21.06.2023.xlsx
+Kaynak: raw_data/hidro_meteoroloji/raw/Yuvacik_Hidro-Meteoroloji_ Gunluk 21.06.2023.xlsx
         sayfa: "duzenli veri" (2006-01-01 -> 2023-12-31, 5 istasyon)
 
 Bu asama veriyi oldugu gibi (istasyon basina sutun, "wide format") temizler.
@@ -17,9 +17,9 @@ import numpy as np
 import pandas as pd
 from scipy.stats import zscore
 
-RAW_PATH = "hidro_meteoroloji/raw/Yuvacık_Hidro-Meteoroloji_ Günlük 21.06.2023.xlsx"
+RAW_PATH = "raw_data/hidro_meteoroloji/raw/Yuvacık_Hidro-Meteoroloji_ Günlük 21.06.2023.xlsx"
 SHEET = "düzenli veri"
-OUT_DIR = "hidro_meteoroloji/processed"
+OUT_DIR = "raw_data/hidro_meteoroloji/processed"
 
 STATIONS = ["tepecik", "aytepe", "kartepe", "cilekli", "kazandere"]
 

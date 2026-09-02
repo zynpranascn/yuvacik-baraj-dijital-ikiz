@@ -7,36 +7,36 @@ __pycache__/
 # (~600MB). hava_dis_sinir_geo.tif / rezervuar_geo.tif / dere_geo.tif BURADA
 # YOK cunku extract_official_basin.py (pipeline adim 3) bunlari gercekten
 # okuyor -- onlar repoya dahil.
-/dem.tif
-/dem.tif.aux.xml
-/dem.tif.ovr
-/dem_geo.tif
-/dem_geo.tif.aux.xml
-/dem_geo.tif.ovr
-/dem_geo.tfw
-/dere.tif
-/dere.tif.aux.xml
-/dere.tif.ovr
-/hava_dis_sinir.tif
-/hava_dis_sinir.tif.aux.xml
-/hava_dis_sinir.tif.ovr
-/hillshade.tif
-/hillshade.tif.aux.xml
-/hillshade.tif.ovr
-/hillshade_geo.tif
-/hillshade_geo.tif.aux.xml
-/hillshade_geo.tif.ovr
-/hillshade_geo.tfw
-/istasyon.tif
-/istasyon.tif.aux.xml
-/istasyon.tif.ovr
-/istasyon_geo.tif
-/istasyon_geo.tif.aux.xml
-/istasyon_geo.tif.ovr
-/istasyon_geo.tfw
-/rezervuar.tif
-/rezervuar.tif.aux.xml
-/rezervuar.tif.ovr
+/raw_data/geotiff_renders/dem.tif
+/raw_data/geotiff_renders/dem.tif.aux.xml
+/raw_data/geotiff_renders/dem.tif.ovr
+/raw_data/geotiff_renders/dem_geo.tif
+/raw_data/geotiff_renders/dem_geo.tif.aux.xml
+/raw_data/geotiff_renders/dem_geo.tif.ovr
+/raw_data/geotiff_renders/dem_geo.tfw
+/raw_data/geotiff_renders/dere.tif
+/raw_data/geotiff_renders/dere.tif.aux.xml
+/raw_data/geotiff_renders/dere.tif.ovr
+/raw_data/geotiff_renders/hava_dis_sinir.tif
+/raw_data/geotiff_renders/hava_dis_sinir.tif.aux.xml
+/raw_data/geotiff_renders/hava_dis_sinir.tif.ovr
+/raw_data/geotiff_renders/hillshade.tif
+/raw_data/geotiff_renders/hillshade.tif.aux.xml
+/raw_data/geotiff_renders/hillshade.tif.ovr
+/raw_data/geotiff_renders/hillshade_geo.tif
+/raw_data/geotiff_renders/hillshade_geo.tif.aux.xml
+/raw_data/geotiff_renders/hillshade_geo.tif.ovr
+/raw_data/geotiff_renders/hillshade_geo.tfw
+/raw_data/geotiff_renders/istasyon.tif
+/raw_data/geotiff_renders/istasyon.tif.aux.xml
+/raw_data/geotiff_renders/istasyon.tif.ovr
+/raw_data/geotiff_renders/istasyon_geo.tif
+/raw_data/geotiff_renders/istasyon_geo.tif.aux.xml
+/raw_data/geotiff_renders/istasyon_geo.tif.ovr
+/raw_data/geotiff_renders/istasyon_geo.tfw
+/raw_data/geotiff_renders/rezervuar.tif
+/raw_data/geotiff_renders/rezervuar.tif.aux.xml
+/raw_data/geotiff_renders/rezervuar.tif.ovr
 
 # OS / editor
 .DS_Store

@@ -1,7 +1,7 @@
 """
 Faz 1 - Gercek DEM uretimi: kontur cizgilerinden (dem.gdb/izhops) TIN-benzeri
 Delaunay lineer interpolasyonla raster DEM insa eder, ve ayni bolgeyi
-dem_geo.tif'in gri tonlarindan tersine-cevirerek uretilen yaklasik DEM ile
+raw_data/geotiff_renders/dem_geo.tif'in gri tonlarindan tersine-cevirerek uretilen yaklasik DEM ile
 karsilastirir.
 
 Kaynak: ../../dem/dem/dem.gdb  (katmanlar: izhops [kontur], calisma_alani [sinir])
@@ -26,7 +26,7 @@ from rasterio.transform import from_origin
 from scipy.interpolate import LinearNDInterpolator
 
 GDB_PATH = "../../dem/dem/dem.gdb"
-RENDER_TIF = "dem_geo.tif"
+RENDER_TIF = "raw_data/geotiff_renders/dem_geo.tif"
 OUT_DIR = "dem_processed"
 RESOLUTION = 20  # metre -- 25m kontur araligina uygun, makul islem suresi
 TARGET_CRS = "EPSG:32635"

@@ -11,12 +11,12 @@ Girdi:
     - dem_processed/DEM_UTM35N.tif
     - dem_processed/basin_official.shp
     - dem_processed/stream_network.geojson
-    - hidro_meteoroloji/processed/station_locations.csv
-    - hidro_meteoroloji/processed/doline_points.shp
+    - raw_data/hidro_meteoroloji/processed/station_locations.csv
+    - raw_data/hidro_meteoroloji/processed/doline_points.shp
 
 Cikti:
     - dem_processed/dolines_basin_overlay.png   (gorsel)
-    - hidro_meteoroloji/processed/doline_points_enriched.csv
+    - raw_data/hidro_meteoroloji/processed/doline_points_enriched.csv
       (id, x, y, inside_basin, dist_to_nearest_stream_m, nearest_station_id, dist_to_station_m)
 
 Calistirma: proje kok dizininden
@@ -31,10 +31,10 @@ import rasterio
 DEM_PATH = "dem_processed/DEM_UTM35N.tif"
 BASIN_PATH = "dem_processed/basin_official.shp"
 STREAMS_PATH = "dem_processed/stream_network.geojson"
-STATIONS_PATH = "hidro_meteoroloji/processed/station_locations.csv"
-DOLINES_PATH = "hidro_meteoroloji/processed/doline_points.shp"
+STATIONS_PATH = "raw_data/hidro_meteoroloji/processed/station_locations.csv"
+DOLINES_PATH = "raw_data/hidro_meteoroloji/processed/doline_points.shp"
 OUT_DIR = "dem_processed"
-PROCESSED_DIR = "hidro_meteoroloji/processed"
+PROCESSED_DIR = "raw_data/hidro_meteoroloji/processed"
 
 
 def main():

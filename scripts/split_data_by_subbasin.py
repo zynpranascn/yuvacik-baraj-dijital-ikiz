@@ -44,7 +44,7 @@ from shapely.geometry import Point
 
 OUT_ROOT = "dem_processed/subbasins"
 DEM_PROCESSED = "dem_processed"
-PROCESSED_DIR = "hidro_meteoroloji/processed"
+PROCESSED_DIR = "raw_data/hidro_meteoroloji/processed"
 
 # Alt-havza -> o alt-havzada fiziksel olarak bulunan meteoroloji istasyonu
 # (mekansal kesisimle dogrulandi). None = o alt-havzada RG-tipi istasyon yok.

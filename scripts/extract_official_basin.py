@@ -1,14 +1,14 @@
 """
-hava_dis_sinir_geo.tif (= "havza dis sinir", gercek GeoTIFF, EPSG:32635 ile
-zaten georeferansli) dosyasindan havza sinirini, rezervuar_geo.tif'ten
-rezervuar poligonunu, dere_geo.tif'ten dere agini dogrudan gercek piksel
+raw_data/geotiff_renders/hava_dis_sinir_geo.tif (= "havza dis sinir", gercek GeoTIFF, EPSG:32635 ile
+zaten georeferansli) dosyasindan havza sinirini, raw_data/geotiff_renders/rezervuar_geo.tif'ten
+rezervuar poligonunu, raw_data/geotiff_renders/dere_geo.tif'ten dere agini dogrudan gercek piksel
 koordinatlarindan cikartir. JPEG digitize etmekten cok daha kesin, cunku bu
 dosyalarin CRS/transform'u dosyanin kendi icinde tanimli.
 
 Cikti: dem_processed/
-    - basin_official.shp       (havza siniri, hava_dis_sinir_geo.tif'ten)
-    - reservoir_official.shp   (rezervuar_geo.tif'ten)
-    - streams_official.shp     (dere_geo.tif'ten)
+    - basin_official.shp       (havza siniri, raw_data/geotiff_renders/hava_dis_sinir_geo.tif'ten)
+    - reservoir_official.shp   (raw_data/geotiff_renders/rezervuar_geo.tif'ten)
+    - streams_official.shp     (raw_data/geotiff_renders/dere_geo.tif'ten)
 """
 import geopandas as gpd
 import numpy as np
@@ -107,21 +107,21 @@ def extract_simple_mask_as_polygon(path, out_path, expected_xy=None, max_reasona
 
 
 def main():
-    print("Havza siniri cikartiliyor (hava_dis_sinir_geo.tif)...")
+    print("Havza siniri cikartiliyor (raw_data/geotiff_renders/hava_dis_sinir_geo.tif)...")
     def basin_color(bands):
         r, g, b = bands
         return (r > 150) & (g < 120) & (b < 120)
-    extract_line_feature_as_polygon("hava_dis_sinir_geo.tif", f"{OUT_DIR}/basin_official.shp", basin_color)
+    extract_line_feature_as_polygon("raw_data/geotiff_renders/hava_dis_sinir_geo.tif", f"{OUT_DIR}/basin_official.shp", basin_color)
 
-    print("\nRezervuar cikartiliyor (rezervuar_geo.tif)...")
+    print("\nRezervuar cikartiliyor (raw_data/geotiff_renders/rezervuar_geo.tif)...")
     # RG6 (Dolusavak) barajin hemen yaninda -- beklenen konum olarak kullaniliyor
     extract_simple_mask_as_polygon(
-        "rezervuar_geo.tif", f"{OUT_DIR}/reservoir_official.shp",
+        "raw_data/geotiff_renders/rezervuar_geo.tif", f"{OUT_DIR}/reservoir_official.shp",
         expected_xy=(751195.67, 4506848.0), max_reasonable_km2=20,
     )
 
-    print("\nDere agi cikartiliyor (dere_geo.tif)...")
-    with rasterio.open("dere_geo.tif") as src:
+    print("\nDere agi cikartiliyor (raw_data/geotiff_renders/dere_geo.tif)...")
+    with rasterio.open("raw_data/geotiff_renders/dere_geo.tif") as src:
         bands = [src.read(b) for b in range(1, src.count + 1)]
         transform = src.transform
         crs = src.crs

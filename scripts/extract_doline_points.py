@@ -1,5 +1,5 @@
 """
-Dolin (karst obruk) nokta konumlarini hidro_meteoroloji/raw/dolin/dolin_geo.tif
+Dolin (karst obruk) nokta konumlarini raw_data/hidro_meteoroloji/raw/dolin/dolin_geo.tif
 render'indan cikartir.
 
 Kaynak dosyanin (diger *_geo.tif render'leri gibi) gomulu CRS'i yok ama .tfw'si
@@ -21,7 +21,7 @@ NOT: Bu otomatik/piksel-tabanli bir cikarim -- kaynakta okunabilir bir lejant/
 öznitelik tablosu olmadigi icin nokta sayisi ve konumlari yaklasiktir (+-1
 piksel = 30m). dolin_validation_map.png ile gorsel dogrulama onerilir.
 
-Cikti: hidro_meteoroloji/processed/
+Cikti: raw_data/hidro_meteoroloji/processed/
     - doline_points.csv    (id, x_utm35n, y_utm35n)
     - doline_points.shp    (+ .dbf/.shx/.prj)
     - dolin_validation_map.png (dolin_geo.tif uzerine cikarilan noktalar)
@@ -38,8 +38,8 @@ import rasterio
 from scipy.ndimage import center_of_mass, label
 from shapely.geometry import Point
 
-SRC_PATH = "hidro_meteoroloji/raw/dolin/dolin_geo.tif"
-OUT_DIR = "hidro_meteoroloji/processed"
+SRC_PATH = "raw_data/hidro_meteoroloji/raw/dolin/dolin_geo.tif"
+OUT_DIR = "raw_data/hidro_meteoroloji/processed"
 CRS = "EPSG:32635"
 
 DARK_THRESHOLD = 60      # RGB < bu deger -> "siyah sembol" adayi

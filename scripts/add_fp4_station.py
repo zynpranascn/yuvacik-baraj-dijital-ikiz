@@ -19,7 +19,7 @@ NOT: Bu koordinat GPS/DMS olcumu DEGIL, harita digitizasyonu -- tahmini hata
 ±100-150m mertebesinde. Diger istasyonlardan farkli olarak elevation_kot_m
 yok (kaynakta yok), source='map_digitized' ile isaretlendi.
 
-Cikti: hidro_meteoroloji/processed/station_locations.csv + .shp (FP4 satiri eklenir)
+Cikti: raw_data/hidro_meteoroloji/processed/station_locations.csv + .shp (FP4 satiri eklenir)
 """
 import geopandas as gpd
 import pandas as pd
@@ -27,7 +27,7 @@ import rasterio
 from pyproj import Transformer
 from shapely.geometry import Point
 
-STATIONS_PATH = "hidro_meteoroloji/processed/station_locations.csv"
+STATIONS_PATH = "raw_data/hidro_meteoroloji/processed/station_locations.csv"
 DEM_PATH = "dem_processed/DEM_UTM35N.tif"
 
 # Piksel GCP'leri (reference_basin_map_from_excel.png, 1211x851) -- bilinen

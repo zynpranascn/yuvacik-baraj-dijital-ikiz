@@ -161,7 +161,7 @@ def main():
 
     print("\nHavza outlet'i (pour point) tespit ediliyor: RG6 (Dolusavak/baraj) istasyonuna en yakin akis hattina yapistiriliyor...")
     acc_arr = np.array(acc)
-    stations = pd.read_csv("hidro_meteoroloji/processed/station_locations.csv")
+    stations = pd.read_csv("raw_data/hidro_meteoroloji/processed/station_locations.csv")
     dam_row = stations[stations["station_id"] == "RG6"].iloc[0]
 
     outlet_row, outlet_col, outlet_x, outlet_y = snap_outlet(
@@ -195,7 +195,7 @@ def main():
     print(f"  Havza disinda kalan istasyon sayisi: {len(outside_rows)}: "
           f"{[r['station_id'] for r in outside_rows]}")
 
-    # Resmi havza siniri (hava_dis_sinir_geo.tif'ten cikarilan) -- her alt-havza
+    # Resmi havza siniri (raw_data/geotiff_renders/hava_dis_sinir_geo.tif'ten cikarilan) -- her alt-havza
     # adayini buna karsi DOGRULUYORUZ. Sadece D8 hesaplamasi (spekulasyon) ile
     # eklemek yerine, gercek resmi veriyle kesisimi olculuyor; kesisimi dusuk
     # olan (orn. yanlis yone akan) adaylar reddediliyor.
@@ -289,7 +289,7 @@ def main():
                 "Dogal (tek cikisli, RG6/baraj outlet'inden D8 ile hesaplanan) havza "
                 f"{natural_area_km2:.2f} km2 -- havza disi istasyonlarin (RG8/RG9/RG12/FP1) "
                 "bulundugu bolgeleri dislar. Her biri icin ayri D8 alt-havzasi hesaplanip, "
-                "SADECE resmi havza siniriyla (basin_official.shp, hava_dis_sinir_geo.tif'ten) "
+                "SADECE resmi havza siniriyla (basin_official.shp, raw_data/geotiff_renders/hava_dis_sinir_geo.tif'ten) "
                 "en az %50 kesisenler ana havzaya birlestirildi (union). Ornegin RG9'un "
                 "alt-havzasi resmi sinirla %0 kesisiyordu (o bolge dogal olarak kuzeye, "
                 "haritanin disina akiyor -- D8 yol izlemeyle dogrulandi) ve REDDEDILDI; "

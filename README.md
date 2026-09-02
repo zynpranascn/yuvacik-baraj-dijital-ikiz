@@ -16,16 +16,18 @@ pip install -r requirements.txt
 python verify_env.py            # paketleri + DEM okumayı doğrular
 ```
 
-Python 3.11 ile test edildi. `dem.tif`, `dem_geo.tif`, `dere.tif`,
-`hillshade.tif`/`hillshade_geo.tif`, `hava_dis_sinir.tif`, `istasyon.tif`/
-`istasyon_geo.tif`, `rezervuar.tif` (~600MB, hiçbir scriptte okunmuyor, salt
-görsel/tarihsel) repoya dahil **değildir** (`.gitignore`). `hava_dis_sinir_geo.tif`,
-`rezervuar_geo.tif`, `dere_geo.tif` ise **dahildir** — `extract_official_basin.py`
-(pipeline adım 3) bunları gerçekten girdi olarak okuyor. Pipeline'ı adım 1'den
-(kontur → DEM) çalıştırmak isterseniz `../../dem/dem/dem.gdb` (Esri File
-Geodatabase) ve karşılaştırma için `dem_geo.tif` ayrıca gerekir, bu repo dışında
-tutulur; aksi halde `dem_processed/DEM_UTM35N.tif` zaten üretilmiş halde repoda
-mevcuttur ve adım 2'den devam edilebilir (bkz. "Pipeline" bölümü).
+Python 3.11 ile test edildi. Tüm ham/kaynak veri `raw_data/` altında toplanmıştır
+(bkz. "Dizin yapısı"). `raw_data/geotiff_renders/` içindeki `dem.tif`, `dem_geo.tif`,
+`dere.tif`, `hillshade.tif`/`hillshade_geo.tif`, `hava_dis_sinir.tif`,
+`istasyon.tif`/`istasyon_geo.tif`, `rezervuar.tif` (~600MB, hiçbir scriptte
+okunmuyor, salt görsel/tarihsel) repoya dahil **değildir** (`.gitignore`).
+`hava_dis_sinir_geo.tif`, `rezervuar_geo.tif`, `dere_geo.tif` ise **dahildir** —
+`extract_official_basin.py` (pipeline adım 3) bunları gerçekten girdi olarak
+okuyor. Pipeline'ı adım 1'den (kontur → DEM) çalıştırmak isterseniz
+`../../dem/dem/dem.gdb` (Esri File Geodatabase) ve karşılaştırma için `dem_geo.tif`
+ayrıca gerekir, bu repo dışında tutulur; aksi halde `dem_processed/DEM_UTM35N.tif`
+zaten üretilmiş halde repoda mevcuttur ve adım 2'den devam edilebilir (bkz.
+"Pipeline" bölümü).
 
 ## İçindekiler
 1. [Hızlı bakış — hangi dosya ne işe yarıyor](#hızlı-bakış)
@@ -47,9 +49,9 @@ En sık ihtiyaç duyulacak dosyalar:
 | Alt-havza morfometrisi (alan, eğim, drenaj yoğunluğu, yağış) | `dem_processed/subbasin_morphometry.csv` |
 | Dere ağı, alt-havzaya atanmış | `dem_processed/streams_by_station.shp` |
 | Dere kollarının uzunluğu (sıralı) | `dem_processed/stream_branch_lengths_sorted.csv` |
-| Dolin noktaları + hangi dereye/alt-havzaya bağlı | `hidro_meteoroloji/processed/doline_points_enriched.csv` |
-| Temizlenmiş 18 yıllık hidro-meteoroloji verisi | `hidro_meteoroloji/processed/hydro_met_clean.csv` |
-| İstasyon konumları (FP1–FP3, RG6–RG12) | `hidro_meteoroloji/processed/station_locations.csv` |
+| Dolin noktaları + hangi dereye/alt-havzaya bağlı | `raw_data/hidro_meteoroloji/processed/doline_points_enriched.csv` |
+| Temizlenmiş 18 yıllık hidro-meteoroloji verisi | `raw_data/hidro_meteoroloji/processed/hydro_met_clean.csv` |
+| İstasyon konumları (FP1–FP3, RG6–RG12) | `raw_data/hidro_meteoroloji/processed/station_locations.csv` |
 | Her alt-havza için ayrı klasör (DEM+dere+dolin+istasyon+iklim) | `dem_processed/subbasins/<FP1\|FP2\|FP3\|RG6>/` |
 | Akış yönlendirme (FP1/FP2/FP3 → RG6/baraj) | `dem_processed/subbasin_flow_routing.csv` |
 
@@ -65,35 +67,41 @@ GEOTİFF_EPSG_32635/                    <- proje kök dizini
 ├── verify_env.py                      <- ortam kurulum doğrulama scripti
 ├── .venv/                             <- Python sanal ortamı
 │
-├── dem.tif, dere.tif, hillshade.tif,          ┐
-│   hava_dis_sinir.tif, istasyon.tif,          │  HAM RENDER dosyaları (kaynak
-│   rezervuar.tif  (+ *_geo.tif/.tfw            │  GIS export'undan) — CRS'siz
-│   varyantları)                                │  veya piksel-tabanlı; DEM_UTM35N.tif
-│   dömüşüm.prj / dömüşüm.txt                  ┘  ÜRETİLDİKTEN sonra sadece
-│                                                  görsel referans/karşılaştırma
-│                                                  için kullanıldı, artık aktif
-│                                                  pipeline'da GİRDİ DEĞİLLER.
+├── raw_data/                          <- TÜM ham/kaynak veri (girdi), tek çatı altında
+│   │
+│   ├── geotiff_renders/               <- GIS export render'ları + koordinat dönüşümü
+│   │   ├── dem.tif, dere.tif, hillshade.tif,     ┐
+│   │   │   hava_dis_sinir.tif, istasyon.tif,     │  HAM RENDER dosyaları — CRS'siz/
+│   │   │   rezervuar.tif  (+ *_geo.tif/.tfw       │  piksel-tabanlı; DEM_UTM35N.tif
+│   │   │   varyantları)                           │  ÜRETİLDİKTEN sonra sadece görsel
+│   │   │                                          │  referans/karşılaştırma için
+│   │   │                                          ┘  kullanıldı — .gitignore'da hariç
+│   │   │                                             (hava_dis_sinir_geo.tif,
+│   │   │                                             rezervuar_geo.tif, dere_geo.tif
+│   │   │                                             HARİÇ — bunlar adım 3'ün gerçek
+│   │   │                                             girdisi, repoda mevcut)
+│   │   └── dömüşüm.prj / dömüşüm.txt              <- georeferans dönüşüm parametreleri
+│   │
+│   └── hidro_meteoroloji/
+│       ├── raw/                       <- HAM kaynak veri (dokunulmamış)
+│       │   ├── İSAŞ_Barajlar Günlük Veri_TEMMUZ_2026.xlsx   (istasyon koordinat tablosu)
+│       │   ├── Yuvacık_Hidro-Meteoroloji_..._2023.xlsx      (18 yıllık günlük ölçüm)
+│       │   ├── DemWhatsApp Image....jpeg                    (referans havza görseli)
+│       │   ├── istasyon konumları/                          (Thiessen poligon görselleri)
+│       │   └── dolin/dolin_geo.tif                          (dolin/karst render'ı)
+│       │
+│       └── processed/                 <- Temizlenmiş / türetilmiş çıktılar
+│           ├── hydro_met_clean.csv(+.parquet)   (Aşama A çıktısı — 6574 gün, QA'lı)
+│           ├── missing_data_report.csv, qa_flags.csv, timeseries_statistics.json
+│           ├── station_locations.csv(+.shp)     (FP1–FP3, RG6–RG12 gerçek koordinat — FP4 yok, bkz. Bilinen sınırlamalar)
+│           ├── fused_daily_parameters.csv       (IDW+lapse-rate ile havza-geneli Q/P/T/E)
+│           ├── hydro_met_timeseries_long.csv    (DB'ye yüklemeye hazır uzun format)
+│           ├── qa_per_station.csv
+│           ├── doline_points.csv(+.shp)         (ham dolin çıkarımı, 53 nokta)
+│           └── doline_points_enriched.csv(+.shp) (+ alt-havza, dere, karst override bilgisi)
 │
 ├── scripts/                           <- TÜM kalıcı Python pipeline kodu
 │   (bkz. "Pipeline" bölümü — çalıştırma sırasıyla)
-│
-├── hidro_meteoroloji/
-│   ├── raw/                           <- HAM kaynak veri (dokunulmamış)
-│   │   ├── İSAŞ_Barajlar Günlük Veri_TEMMUZ_2026.xlsx   (istasyon koordinat tablosu)
-│   │   ├── Yuvacık_Hidro-Meteoroloji_..._2023.xlsx      (18 yıllık günlük ölçüm)
-│   │   ├── DemWhatsApp Image....jpeg                    (referans havza görseli)
-│   │   ├── istasyon konumları/                          (Thiessen poligon görselleri)
-│   │   └── dolin/dolin_geo.tif                          (dolin/karst render'ı)
-│   │
-│   └── processed/                     <- Temizlenmiş / türetilmiş çıktılar
-│       ├── hydro_met_clean.csv(+.parquet)   (Aşama A çıktısı — 6574 gün, QA'lı)
-│       ├── missing_data_report.csv, qa_flags.csv, timeseries_statistics.json
-│       ├── station_locations.csv(+.shp)     (FP1–FP3, RG6–RG12 gerçek koordinat — FP4 yok, bkz. Bilinen sınırlamalar)
-│       ├── fused_daily_parameters.csv       (IDW+lapse-rate ile havza-geneli Q/P/T/E)
-│       ├── hydro_met_timeseries_long.csv    (DB'ye yüklemeye hazır uzun format)
-│       ├── qa_per_station.csv
-│       ├── doline_points.csv(+.shp)         (ham dolin çıkarımı, 53 nokta)
-│       └── doline_points_enriched.csv(+.shp) (+ alt-havza, dere, karst override bilgisi)
 │
 ├── dem_processed/                     <- TÜM DEM/GIS türetilmiş çıktılar
 │   ├── DEM_UTM35N.tif                 <- GERÇEK DEM (konturdan üretildi, doğrulandı)
@@ -153,7 +161,7 @@ Script'ler **çalıştırma sırasına göre** (`scripts/`, hepsi proje kök diz
 |---|---|---|---|
 | 1 | `build_dem_from_contours.py` | `../../dem/dem/dem.gdb` (kontur) | `DEM_UTM35N.tif` |
 | 2 | `dem_flow_pipeline.py` | `DEM_UTM35N.tif` | `flow_direction_D8.tif`, `flow_accumulation.tif`, `basin_delineated*.shp` |
-| 3 | `extract_official_basin.py` | `hava_dis_sinir_geo.tif`, `rezervuar_geo.tif`, `dere_geo.tif` | `basin_official.shp`, `reservoir_official.shp`, `streams_official.shp` |
+| 3 | `extract_official_basin.py` | `raw_data/geotiff_renders/hava_dis_sinir_geo.tif`, `rezervuar_geo.tif`, `dere_geo.tif` | `basin_official.shp`, `reservoir_official.shp`, `streams_official.shp` |
 | 4 | `georeference_reference_map.py` | WhatsApp referans görseli | `basin_delineated_reference_map.shp` (çapraz doğrulama) |
 | 5 | `hydro_met_processing.py` | Ham Excel (hidro-met) | `hydro_met_clean.csv` |
 | 6 | `build_station_locations.py` | İSAŞ Excel (koordinat tablosu) | `station_locations.csv` (RG6–RG12, FP1–FP3) |
@@ -221,14 +229,14 @@ yağış) için bkz. `dem_processed/subbasin_morphometry.csv`.
 Miktarına Etkilerinin Değerlendirilmesi: Yuvacık Baraj Gölü Havzası. *Jeoloji
 Mühendisliği Dergisi*, 45(1), 129-153. DOI: 10.24232/jmd.941528
 
-`hidro_meteoroloji/raw/ayfer_hoca_referans/` altında makalenin tamamı
+`raw_data/hidro_meteoroloji/raw/ayfer_hoca_referans/` altında makalenin tamamı
 (`ayfer_hoca_makale_kaynak.pdf`, 25 sayfa) ve içindeki 5 şeklin tamamı 400 DPI'da,
 tam başlık/lejant/alıntı metniyle kesilmiş olarak duruyor:
 
 | Dosya | İçerik (makaledeki adı) | Durum |
 |---|---|---|
 | `sekil1_calisma_alani_ve_dereler.png` | Şekil 1 — Çalışma alanı + Türkiye lokasyon haritası; alt havza haritası (Kirazdere/Serindere/Kazandere/Ara, isimli dereler, RG1–RG12, FP1–FP4, iklim grid) | **Aktif** — `reference_subbasins_from_map.shp` dijitizasyonunun kaynağı; FP1=Kirazdere, FP2=Kazandere, FP3=Serindere adlandırmasını doğruluyor |
-| `sekil4_composite_a_e_numarali_alt_havza.png` | Şekil 4 — a: SAM/DEM, b: **numaralı** alt havza haritası (63 alt havza, mağara/kaptaj/keson kuyu + kirlilik noktaları), c: eğim, d: toprak, e: arazi kullanımı | **Aktif (b paneli)** — `hidro_meteoroloji/processed/doline_points_enriched.csv`'deki `karst_magara_override` kararının literatür dayanağı; **Aktif (a paneli, destekleyici)** — DEM yükseklik aralığı (140–1530 m) `DEM_UTM35N.tif` ile (118.8–1525 m) örtüşüyor; c/d/e panelleri **pasif**, ileride eğim/toprak/arazi örtüsü fazında kullanılacak |
+| `sekil4_composite_a_e_numarali_alt_havza.png` | Şekil 4 — a: SAM/DEM, b: **numaralı** alt havza haritası (63 alt havza, mağara/kaptaj/keson kuyu + kirlilik noktaları), c: eğim, d: toprak, e: arazi kullanımı | **Aktif (b paneli)** — `raw_data/hidro_meteoroloji/processed/doline_points_enriched.csv`'deki `karst_magara_override` kararının literatür dayanağı; **Aktif (a paneli, destekleyici)** — DEM yükseklik aralığı (140–1530 m) `DEM_UTM35N.tif` ile (118.8–1525 m) örtüşüyor; c/d/e panelleri **pasif**, ileride eğim/toprak/arazi örtüsü fazında kullanılacak |
 | `sekil3_gozlenen_aylik_akim_degerleri.png` | Şekil 3 — FP1 Kirazdere, FP2 Kazandere, FP3 Serindere için 2006-2015 gözlenen aylık ortalama akım (m³/s) | **Aktif** — tam da sizin izlediğiniz 3 istasyon (FP1/FP2/FP3); `station_locations.csv`/`hydro_met_clean.csv`'deki günlük akım verisiyle doğrudan çapraz doğrulanabilir |
 | `sekil5_gozlenen_vs_modellenen_akim.png` | Şekil 5 — FP1/FP2/FP3 için gözlenen vs SWAT-modellenen akım (R², 1:1 çizgisi) | Pasif (referans) — SWAT modellemesi sizin Faz 1 kapsamınızda değil, ama gelecekte bir hidrolojik model kurarsanız kalibrasyon karşılaştırması için örnek teşkil eder |
 | `sekil2_aylik_yagis_grafigi.png` | Şekil 2 — RG1–RG12 istasyonlarında ölçülen ortalama aylık yağış toplamı (mm) | **Pasif** — `hydro_met_clean.csv`/`fused_daily_parameters.csv`'de günlük çözünürlükte veri zaten var; detaylı veri gelince kendi üretilecek eşdeğer grafikle karşılaştırılacak |

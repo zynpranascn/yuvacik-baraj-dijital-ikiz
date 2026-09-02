@@ -9,14 +9,14 @@ Roadmap 4.2/4.3 kararlari:
       Hargreaves/Thornthwaite hesaplamaya gerek yok
 
 Girdi:
-    - hidro_meteoroloji/processed/hydro_met_clean.csv  (Asama A ciktisi, wide format)
-    - hidro_meteoroloji/processed/station_locations.csv (DEM-elevation ile)
+    - raw_data/hidro_meteoroloji/processed/hydro_met_clean.csv  (Asama A ciktisi, wide format)
+    - raw_data/hidro_meteoroloji/processed/station_locations.csv (DEM-elevation ile)
     - dem_processed/DEM_UTM35N.tif, basin_official.shp (resmi havza siniri --
       istasyon-havza iliskisi / IDW hedef noktasi icin nihai referans olarak
       kabul edildi, bkz. dem_flow_pipeline.py notu; basin_delineated.shp D8'in
       kendi dogrulama surecinde kullandigi ara sonuc, burada KULLANILMIYOR)
 
-Cikti: hidro_meteoroloji/processed/
+Cikti: raw_data/hidro_meteoroloji/processed/
     - fused_daily_parameters.csv   (date, Q_fused, P_fused, T_fused, E_fused)
     - hydro_met_timeseries_long.csv (date, station_id, parameter, value, qa_flag -- DB'ye hazir)
     - qa_per_station.csv           (istasyon basina veri kalitesi ozeti)
@@ -29,11 +29,11 @@ import numpy as np
 import pandas as pd
 import rasterio
 
-HYDRO_MET_PATH = "hidro_meteoroloji/processed/hydro_met_clean.csv"
-STATIONS_PATH = "hidro_meteoroloji/processed/station_locations.csv"
+HYDRO_MET_PATH = "raw_data/hidro_meteoroloji/processed/hydro_met_clean.csv"
+STATIONS_PATH = "raw_data/hidro_meteoroloji/processed/station_locations.csv"
 DEM_PATH = "dem_processed/DEM_UTM35N.tif"
 BASIN_PATH = "dem_processed/basin_official.shp"
-OUT_DIR = "hidro_meteoroloji/processed"
+OUT_DIR = "raw_data/hidro_meteoroloji/processed"
 
 STATIONS = ["tepecik", "aytepe", "kartepe", "cilekli", "kazandere"]
 # sutun-adi kisaltmasi -> station_locations.csv'deki station_id.

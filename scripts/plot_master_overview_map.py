@@ -6,8 +6,8 @@ calistirilabilir hale getirir.
 
 Girdi: DEM_UTM35N.tif, subbasins_by_station.shp, streams_by_station.shp,
        basin_official.shp, reservoir_official.shp,
-       hidro_meteoroloji/processed/doline_points_enriched.csv,
-       hidro_meteoroloji/processed/station_locations.csv
+       raw_data/hidro_meteoroloji/processed/doline_points_enriched.csv,
+       raw_data/hidro_meteoroloji/processed/station_locations.csv
 Cikti: dem_processed/master_overview_map.png
 
 Calistirma: proje kok dizininden
@@ -20,7 +20,7 @@ import pandas as pd
 import rasterio
 
 OUT_DIR = "dem_processed"
-PROCESSED_DIR = "hidro_meteoroloji/processed"
+PROCESSED_DIR = "raw_data/hidro_meteoroloji/processed"
 
 COLORS = {"FP1": "#e6194B", "FP2": "#3cb44b", "FP3": "#4363d8", "RG6": "#f58231"}
 

@@ -18,7 +18,7 @@ Strahler literaturu):
       ormanli) havza
 
 Girdi: dem_processed/subbasins/<sid>/{dem.tif, streams.shp, boundary.shp}
-       hidro_meteoroloji/processed/hydro_met_clean.csv
+       raw_data/hidro_meteoroloji/processed/hydro_met_clean.csv
 
 Cikti: dem_processed/subbasin_morphometry.csv (+ konsola siralanmis rapor)
 
@@ -57,7 +57,7 @@ def slope_stats(dem_path):
 
 
 def main():
-    hydro_met = pd.read_csv("hidro_meteoroloji/processed/hydro_met_clean.csv")
+    hydro_met = pd.read_csv("raw_data/hidro_meteoroloji/processed/hydro_met_clean.csv")
 
     rows = []
     for sid in SUBBASIN_IDS:

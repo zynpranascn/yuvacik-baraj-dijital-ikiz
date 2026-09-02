@@ -22,7 +22,7 @@ from scipy.ndimage import binary_dilation, binary_erosion, binary_fill_holes, la
 from shapely.geometry import Polygon, LineString
 from skimage import measure
 
-IMG_PATH = "hidro_meteoroloji/raw/DemWhatsApp Image 2026-08-10 at 12.05.49.jpeg"
+IMG_PATH = "raw_data/hidro_meteoroloji/raw/DemWhatsApp Image 2026-08-10 at 12.05.49.jpeg"
 OUT_DIR = "dem_processed"
 
 # Tick-etiket piksel merkezleri (onceki adimda dark-pixel analiziyle bulundu)

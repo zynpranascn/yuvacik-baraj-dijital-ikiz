@@ -21,7 +21,7 @@ import rasterio
 from shapely.geometry import Point
 from pyproj import Transformer
 
-# Kaynak: hidro_meteoroloji/raw/İSAŞ_Barajlar Günlük Veri_TEMMUZ_2026.xlsx
+# Kaynak: raw_data/hidro_meteoroloji/raw/İSAŞ_Barajlar Günlük Veri_TEMMUZ_2026.xlsx
 # "Plan ve Koordinantlar" sayfasi, YUVACIK BARAJI istasyon tablosu (elle dogrulanmis)
 stations_raw = [
     # id,   name,        type,   lat_d, lat_m, lat_s,  lon_d, lon_m, lon_s, kot_m
@@ -63,7 +63,7 @@ with rasterio.open("dem_processed/DEM_UTM35N.tif") as dem_src:
     df["elevation_m"] = band[rows_idx, cols_idx]
 df["elevation_diff_m"] = (df["elevation_m"] - df["elevation_kot_m"]).round(1)
 
-out_dir = "hidro_meteoroloji/processed"
+out_dir = "raw_data/hidro_meteoroloji/processed"
 import os
 os.makedirs(out_dir, exist_ok=True)
 

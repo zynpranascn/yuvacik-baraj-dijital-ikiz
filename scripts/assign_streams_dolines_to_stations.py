@@ -59,7 +59,7 @@ Cikti: dem_processed/
     - streams_by_station.shp      (her dere segmentine station_id atanmis)
     - subbasin_flow_routing.csv   (FP1/FP2/FP3 -> RG6 akis yonlendirme tablosu)
     - subbasins_by_station_map.png
-  hidro_meteoroloji/processed/
+  raw_data/hidro_meteoroloji/processed/
     - doline_points_enriched.csv (station_id / kind sutunlari eklendi, uzerine yazilir)
 
 Calistirma: proje kok dizininden
@@ -82,7 +82,7 @@ from shapely.geometry import shape
 
 DIRMAP = (64, 128, 1, 2, 4, 8, 16, 32)
 OUT_DIR = "dem_processed"
-PROCESSED_DIR = "hidro_meteoroloji/processed"
+PROCESSED_DIR = "raw_data/hidro_meteoroloji/processed"
 
 # Debi olculen (Akis/Debi) istasyonlar -- dere/dolin atamasinin ANA kriteri.
 # NOT: FP4 kaldirildi (bkz. modul docstring, "REVIZYON NOTU") -- artik sadece
