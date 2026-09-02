@@ -1,0 +1,14 @@
+{
+  "station_id": "FP2",
+  "name": "Kazandere",
+  "kind": "debi_istasyonu",
+  "area_km2": 23.19,
+  "n_stream_segments": 31,
+  "n_dolines": 5,
+  "stations_inside": [
+    "RG11",
+    "FP2"
+  ],
+  "has_met_timeseries": true,
+  "met_source_station": "kazandere"
+}

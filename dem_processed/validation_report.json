@@ -1,0 +1,73 @@
+{
+  "dem": {
+    "shape": [
+      1424,
+      2037
+    ],
+    "elevation_min_m": 25.0,
+    "elevation_max_m": 1575.0
+  },
+  "flow_direction": {
+    "unique_values": [
+      0,
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128
+    ]
+  },
+  "flow_accumulation": {
+    "min": 0,
+    "max": 486441
+  },
+  "outlet": {
+    "x": 750941.876511184,
+    "y": 4507158.383101692,
+    "accumulation": 436662
+  },
+  "basin": {
+    "combined_area_km2": 242.32,
+    "natural_single_outlet_area_km2": 174.66,
+    "sub_catchments": [
+      {
+        "station_id": "RG8",
+        "name": "Aytepe",
+        "sub_catchment_area_km2": 0.11,
+        "official_overlap_pct": 100.0,
+        "accepted": true
+      },
+      {
+        "station_id": "RG9",
+        "name": "Kartepe",
+        "sub_catchment_area_km2": 1.62,
+        "official_overlap_pct": 0.0,
+        "accepted": false
+      },
+      {
+        "station_id": "RG12",
+        "name": "Haci Osman",
+        "sub_catchment_area_km2": 0.74,
+        "official_overlap_pct": 100.0,
+        "accepted": true
+      },
+      {
+        "station_id": "FP1",
+        "name": "Kirazdere",
+        "sub_catchment_area_km2": 66.91,
+        "official_overlap_pct": 98.4,
+        "accepted": true
+      }
+    ],
+    "reference_calisma_alani_area_km2": 1043.43,
+    "area_diff_pct": -76.8,
+    "note": "Dogal (tek cikisli, RG6/baraj outlet'inden D8 ile hesaplanan) havza 174.66 km2 -- havza disi istasyonlarin (RG8/RG9/RG12/FP1) bulundugu bolgeleri dislar. Her biri icin ayri D8 alt-havzasi hesaplanip, SADECE resmi havza siniriyla (basin_official.shp, hava_dis_sinir_geo.tif'ten) en az %50 kesisenler ana havzaya birlestirildi (union). Ornegin RG9'un alt-havzasi resmi sinirla %0 kesisiyordu (o bolge dogal olarak kuzeye, haritanin disina akiyor -- D8 yol izlemeyle dogrulandi) ve REDDEDILDI; RG8 (%100), RG12 (%100), FP1 (%98.4) kabul edildi. Detaylar icin sub_catchments listesindeki 'accepted'/'official_overlap_pct' alanlarina bakin. 'basin_delineated.shp' artik bu dogrulanmis birlesik alani temsil ediyor; sadece dogal havza icin 'basin_delineated_natural.shp' ayrica saklandi. calisma_alani (~1043 km2) havza siniri degil, cok daha genis bir etut alani (basin_official ile karistirilmamali)."
+  },
+  "stream_network": {
+    "threshold_cells": 1000,
+    "n_branches": 1427
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "station_id": "FP3",
+  "name": "Serindere",
+  "kind": "debi_istasyonu",
+  "area_km2": 122.19,
+  "n_stream_segments": 167,
+  "n_dolines": 15,
+  "stations_inside": [
+    "RG10",
+    "FP3"
+  ],
+  "has_met_timeseries": true,
+  "met_source_station": "cilekli"
+}

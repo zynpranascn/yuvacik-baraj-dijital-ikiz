@@ -1,0 +1,15 @@
+id,x_utm35n,y_utm35n,station_id,kind,assign_met,dere_adi,nearest_se,dist_to_st,inside_bas
+1,762059.0722556802,4505168.8817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,7263.8,False
+2,761826.5722556802,4504663.3817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,6956.2,False
+3,762971.5722556802,4504328.3817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,8065.8,False
+4,762628.5722556802,4504186.3817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,7715.5,False
+5,763046.9293985374,4503984.096000608,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,8126.7,False
+6,762827.2865413945,4503928.3817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,7906.2,False
+7,763328.0008271087,4503826.953143465,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,8406.1,False
+8,760251.5722556802,4503318.3817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,5353.1,False
+12,762096.5722556802,4502728.3817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,7257.0,False
+13,761849.0722556802,4502638.3817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,7027.0,False
+14,753887.5722556802,4500560.8817148935,RG6,baraj_yerel_havza,d8_surface,Baraj Yerel Havzasi,448,447.5,True
+15,754189.1232760884,4500441.647021016,RG6,baraj_yerel_havza,d8_surface,Baraj Yerel Havzasi,448,594.1,True
+16,754225.2086193166,4500349.745351257,RG6,baraj_yerel_havza,d8_surface,Baraj Yerel Havzasi,448,692.8,True
+17,754246.5722556802,4500210.8817148935,RG6,baraj_yerel_havza,d8_surface,Baraj Yerel Havzasi,502,682.0,True

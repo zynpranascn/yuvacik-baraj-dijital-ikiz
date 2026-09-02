@@ -1,0 +1,15 @@
+{
+  "station_id": "FP1",
+  "name": "Kirazdere",
+  "kind": "debi_istasyonu",
+  "area_km2": 83.95,
+  "n_stream_segments": 105,
+  "n_dolines": 19,
+  "stations_inside": [
+    "RG8",
+    "RG12",
+    "FP1"
+  ],
+  "has_met_timeseries": true,
+  "met_source_station": "aytepe"
+}

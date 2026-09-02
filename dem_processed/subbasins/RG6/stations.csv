@@ -1,0 +1,3 @@
+station_id,name,type,lat_wgs84,lon_wgs84,elevation_kot_m,x_utm35n,y_utm35n,elevation_m,elevation_diff_m,source
+RG6,Dolusavak,Meteoroloji,40.674277777777775,29.97202777777777,178.0,751195.6740506134,4506848.076502549,176.78024,-1.2,isas_table_dms
+RG7,Tepecik,Yagis/Sicaklik,40.62725,29.99038888888889,700.0,752925.4565687777,4501679.459934541,673.0793,-26.9,isas_table_dms

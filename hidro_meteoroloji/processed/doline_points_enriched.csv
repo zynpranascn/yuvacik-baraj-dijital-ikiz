@@ -1,0 +1,54 @@
+id,x_utm35n,y_utm35n,station_id,kind,assign_method,dere_adi,nearest_seg_id,dist_to_stream_m,inside_basin_official
+1,762059.0722556802,4505168.8817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,7263.8,False
+2,761826.5722556802,4504663.3817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,6956.2,False
+3,762971.5722556802,4504328.3817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,8065.8,False
+4,762628.5722556802,4504186.3817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,7715.5,False
+5,763046.9293985374,4503984.096000608,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,8126.7,False
+6,762827.2865413945,4503928.3817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,7906.2,False
+7,763328.0008271087,4503826.953143465,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,8406.1,False
+8,760251.5722556802,4503318.3817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,5353.1,False
+9,760399.0722556802,4503008.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,391,1153.0,True
+10,760184.0722556802,4502975.8817148935,FP3,debi_istasyonu,d8_surface,Serindere,380,1028.4,True
+11,761311.5722556802,4502768.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,392,933.8,True
+12,762096.5722556802,4502728.3817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,7257.0,False
+13,761849.0722556802,4502638.3817148935,RG6,baraj_yerel_havza,karst_magara_override,Baraj Yerel Havzasi,1104,7027.0,False
+14,753887.5722556802,4500560.8817148935,RG6,baraj_yerel_havza,d8_surface,Baraj Yerel Havzasi,448,447.5,True
+15,754189.1232760884,4500441.647021016,RG6,baraj_yerel_havza,d8_surface,Baraj Yerel Havzasi,448,594.1,True
+16,754225.2086193166,4500349.745351257,RG6,baraj_yerel_havza,d8_surface,Baraj Yerel Havzasi,448,692.8,True
+17,754246.5722556802,4500210.8817148935,RG6,baraj_yerel_havza,d8_surface,Baraj Yerel Havzasi,502,682.0,True
+18,754353.5722556802,4499128.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,545,131.8,True
+19,753306.5722556802,4499068.3817148935,FP2,debi_istasyonu,d8_surface,Kazandere,558,606.8,True
+20,754731.5722556802,4499049.6317148935,FP3,debi_istasyonu,d8_surface,Serindere,545,13.5,True
+21,754546.5722556802,4498432.1317148935,FP3,debi_istasyonu,d8_surface,Serindere,623,133.7,True
+22,754761.5722556802,4498468.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,623,7.3,True
+23,745693.6555890136,4498351.2983815605,FP1,debi_istasyonu,d8_surface,Kirazdere,580,898.0,True
+24,749199.0722556802,4498362.1317148935,FP1,debi_istasyonu,d8_surface,Kirazdere,676,674.0,True
+25,749265.5722556802,4498351.3817148935,FP1,debi_istasyonu,d8_surface,Kirazdere,676,678.3,True
+26,746126.5722556802,4498298.3817148935,FP1,debi_istasyonu,d8_surface,Kirazdere,580,562.4,True
+27,746336.5722556802,4498238.3817148935,FP1,debi_istasyonu,d8_surface,Kirazdere,580,495.9,True
+28,745886.5722556802,4498208.3817148935,FP1,debi_istasyonu,d8_surface,Kirazdere,580,802.3,True
+29,754911.5722556802,4498183.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,623,300.3,True
+30,749478.5722556802,4498039.3817148935,FP2,debi_istasyonu,d8_surface,Kazandere,618,313.4,True
+31,749295.5722556802,4497979.3817148935,FP1,debi_istasyonu,d8_surface,Kirazdere,676,353.0,True
+32,746011.5722556802,4498028.3817148935,FP1,debi_istasyonu,d8_surface,Kirazdere,580,842.2,True
+33,749671.5722556802,4497978.3817148935,FP2,debi_istasyonu,d8_surface,Kazandere,618,155.5,True
+34,749213.7151128231,4497917.667429179,FP1,debi_istasyonu,d8_surface,Kirazdere,676,255.9,True
+35,749296.0722556802,4497902.8817148935,FP1,debi_istasyonu,d8_surface,Kirazdere,676,296.1,True
+36,749951.5722556802,4497558.3817148935,FP2,debi_istasyonu,d8_surface,Kazandere,619,434.7,True
+37,745112.8222556802,4497017.1317148935,FP1,debi_istasyonu,d8_surface,Kirazdere,635,206.6,True
+38,747611.5722556802,4496998.3817148935,FP1,debi_istasyonu,d8_surface,Kirazdere,951,472.0,True
+39,746232.8222556802,4496793.3817148935,FP1,debi_istasyonu,d8_surface,Kirazdere,919,328.1,True
+40,746073.5722556802,4496533.3817148935,FP1,debi_istasyonu,d8_surface,Kirazdere,680,259.3,True
+41,745729.9055890136,4496376.7150482265,FP1,debi_istasyonu,d8_surface,Kirazdere,680,61.7,True
+42,746022.5722556802,4496476.3817148935,FP1,debi_istasyonu,d8_surface,Kirazdere,680,182.9,True
+43,758374.0722556802,4496385.8817148935,FP3,debi_istasyonu,d8_surface,Serindere,661,598.0,True
+44,745568.2389223468,4496271.7150482265,FP1,debi_istasyonu,d8_surface,Kirazdere,680,200.7,True
+45,754011.5722556802,4496269.810286322,FP3,debi_istasyonu,d8_surface,Serindere,739,672.1,True
+46,745627.2865413945,4496154.096000608,FP1,debi_istasyonu,d8_surface,Kirazdere,719,256.1,True
+47,745517.1972556802,4496118.3817148935,FP1,debi_istasyonu,d8_surface,Kirazdere,719,220.0,True
+48,753089.0722556802,4495903.3817148935,FP2,debi_istasyonu,d8_surface,Kazandere,706,428.5,True
+49,753246.5722556802,4495093.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,770,226.6,True
+50,752916.5722556802,4495018.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,770,526.8,True
+51,753300.9472556802,4495061.5067148935,FP3,debi_istasyonu,d8_surface,Serindere,770,163.6,True
+52,753306.5722556802,4494763.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,770,254.0,True
+53,752679.5722556802,4494562.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,770,868.4,True

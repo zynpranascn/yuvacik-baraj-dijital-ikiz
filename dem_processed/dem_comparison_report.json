@@ -1,0 +1,18 @@
+{
+  "resolution_m": 20,
+  "n_holdout_points": 39542,
+  "contour_based_dem": {
+    "MAE_m": 8.307030147392153,
+    "RMSE_m": 11.964207278277044,
+    "max_abs_error_m": 103.95196533203125
+  },
+  "color_reversed_dem": {
+    "MAE_m": 40.616886258551574,
+    "RMSE_m": 94.19873775532359,
+    "max_abs_error_m": 1189.4062316107565,
+    "fit_gray_to_elev": {
+      "a": 0.19636003152091142,
+      "b": 6.7211525056750245
+    }
+  }
+}

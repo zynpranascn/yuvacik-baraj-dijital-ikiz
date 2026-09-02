@@ -1,0 +1,16 @@
+id,x_utm35n,y_utm35n,station_id,kind,assign_met,dere_adi,nearest_se,dist_to_st,inside_bas
+9,760399.0722556802,4503008.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,391,1153.0,True
+10,760184.0722556802,4502975.8817148935,FP3,debi_istasyonu,d8_surface,Serindere,380,1028.4,True
+11,761311.5722556802,4502768.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,392,933.8,True
+18,754353.5722556802,4499128.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,545,131.8,True
+20,754731.5722556802,4499049.6317148935,FP3,debi_istasyonu,d8_surface,Serindere,545,13.5,True
+21,754546.5722556802,4498432.1317148935,FP3,debi_istasyonu,d8_surface,Serindere,623,133.7,True
+22,754761.5722556802,4498468.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,623,7.3,True
+29,754911.5722556802,4498183.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,623,300.3,True
+43,758374.0722556802,4496385.8817148935,FP3,debi_istasyonu,d8_surface,Serindere,661,598.0,True
+45,754011.5722556802,4496269.810286322,FP3,debi_istasyonu,d8_surface,Serindere,739,672.1,True
+49,753246.5722556802,4495093.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,770,226.6,True
+50,752916.5722556802,4495018.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,770,526.8,True
+51,753300.9472556802,4495061.5067148935,FP3,debi_istasyonu,d8_surface,Serindere,770,163.6,True
+52,753306.5722556802,4494763.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,770,254.0,True
+53,752679.5722556802,4494562.3817148935,FP3,debi_istasyonu,d8_surface,Serindere,770,868.4,True

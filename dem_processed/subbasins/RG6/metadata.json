@@ -1,0 +1,14 @@
+{
+  "station_id": "RG6",
+  "name": "Dolusavak",
+  "kind": "baraj_yerel_havza",
+  "area_km2": 31.36,
+  "n_stream_segments": 43,
+  "n_dolines": 14,
+  "stations_inside": [
+    "RG6",
+    "RG7"
+  ],
+  "has_met_timeseries": true,
+  "met_source_station": "tepecik"
+}

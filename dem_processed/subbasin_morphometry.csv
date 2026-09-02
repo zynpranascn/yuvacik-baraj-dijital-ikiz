@@ -1,0 +1,5 @@
+station_id,dere_adi,alan_km2,cevre_km,drenaj_yogunlugu_km_km2,kompaktlik_Kc,uzama_orani_Re,yukseklik_min_m,yukseklik_ort_m,yukseklik_max_m,rolyef_m,egim_ort_derece,egim_max_derece,yillik_ort_yagis_mm
+FP3,Serindere,122.19,80.94,0.971,2.066,0.7,190.0,946.6,1525.0,1335.0,16.6,65.1,549.7
+FP1,Kirazdere,83.95,75.0,0.98,2.309,0.694,175.0,861.9,1300.0,1125.0,15.5,70.7,1178.8
+RG6,Baraj Yerel Havzasi,31.36,37.44,0.967,1.886,0.773,118.8,479.2,1225.0,1106.2,18.0,58.7,1137.2
+FP2,Kazandere,23.19,31.06,0.989,1.819,0.61,175.0,890.2,1350.0,1175.0,18.3,56.5,1206.0

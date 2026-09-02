@@ -1,0 +1,6 @@
+id,x_utm35n,y_utm35n,station_id,kind,assign_met,dere_adi,nearest_se,dist_to_st,inside_bas
+19,753306.5722556802,4499068.3817148935,FP2,debi_istasyonu,d8_surface,Kazandere,558,606.8,True
+30,749478.5722556802,4498039.3817148935,FP2,debi_istasyonu,d8_surface,Kazandere,618,313.4,True
+33,749671.5722556802,4497978.3817148935,FP2,debi_istasyonu,d8_surface,Kazandere,618,155.5,True
+36,749951.5722556802,4497558.3817148935,FP2,debi_istasyonu,d8_surface,Kazandere,619,434.7,True
+48,753089.0722556802,4495903.3817148935,FP2,debi_istasyonu,d8_surface,Kazandere,706,428.5,True

@@ -1,0 +1,15 @@
+station_id,parameter,n_days,n_flagged,n_warning,n_reject,flagged_pct
+RG7,precip_mm,6574,0,0,0,0.0
+RG7,temp_c,6574,1,1,0,0.02
+RG7,snow_cm,6574,0,0,0,0.0
+RG8,precip_mm,6574,0,0,0,0.0
+RG8,temp_c,6574,2,2,0,0.03
+RG8,snow_cm,6574,0,0,0,0.0
+RG9,precip_mm,6574,5,5,0,0.08
+RG9,temp_c,6574,3,3,0,0.05
+RG9,snow_cm,6574,1,1,0,0.02
+RG10,precip_mm,6574,1,1,0,0.02
+RG10,temp_c,6574,21,21,0,0.32
+RG10,snow_cm,6574,1,1,0,0.02
+RG11,precip_mm,6574,1,1,0,0.02
+RG11,temp_c,6574,1,1,0,0.02

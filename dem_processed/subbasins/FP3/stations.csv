@@ -1,0 +1,3 @@
+station_id,name,type,lat_wgs84,lon_wgs84,elevation_kot_m,x_utm35n,y_utm35n,elevation_m,elevation_diff_m,source
+RG10,Cilekli,Yagis/Sicaklik,40.541694444444445,30.044083333333337,805.0,757796.1861686539,4492336.478382562,793.553,-11.4,isas_table_dms
+FP3,Serindere,Akis/Debi,40.64680555555555,30.016972222222225,284.0,755099.6524039021,4503927.467963016,295.3446,11.3,isas_table_dms

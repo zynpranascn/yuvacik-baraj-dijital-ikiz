@@ -1,0 +1,5 @@
+from_station,to_station,mechanism,note
+FP1,RG6,harici_sistem_muhtemelen_tunel,"Kirazdere -- ayri/harici sistem (muhtemelen tunel), dogrudan baraja"
+FP2,RG6,bagimsiz_kol,"Kazandere -- kendi (yesil) alt-havzasindan akar, FP3 ile yukarida birlesmez, baraja ulasir"
+FP3,RG6,bagimsiz_kol_yerel_havzadan_gecis,"Serindere -- kendi (mavi) alt-havzasindan akar, RG6 yerel havzasindan (sari bolge) gecerek baraja ulasir"
+RG6_yerel_havza,RG6,d8_yuzey_yerel,"Kendi yerel akisi, dogrudan baraja"
